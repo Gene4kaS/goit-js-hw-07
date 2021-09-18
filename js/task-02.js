@@ -14,4 +14,4 @@ const ingredients = [
     listEl.append(items);
     
   })
-  console.log(ingredientsEl);
+  
