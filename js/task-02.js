@@ -7,11 +7,14 @@ const ingredients = [
     'Приправы',
   ];
 
-  let listEl = document.getElementById('ingredients');
-  const ingredientsEl = ingredients.forEach(ingredient => {
-    let items = document.createElement('li');
-    items.innerHTML = ingredient;
-    listEl.append(items);
-    
+  const listEl = document.getElementById('ingredients');
+
+  const ingredientsEl = ingredients.map(ingredient => {
+    const items = document.createElement('li');
+    items.textContent = ingredient;
+    return items;
   })
-  
+
+  // console.log(ingredientsEl);
+  listEl.append(...ingredientsEl);
+
